@@ -1,0 +1,57 @@
+import 'package:flutter/material.dart';
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My Portfolio'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CircleAvatar(
+              radius: 50,
+            backgroundImage: AssetImage('assets/images/portfolio.png'),
+              // Image.asset(AppIcons.portFolio)// Ensure this path is correct
+            // child: FlutterLogo(size: 50),
+            ),
+            SizedBox(height: 16),
+            Text(
+              'Chandani Kumari',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              'Flutter Developer',
+              style: TextStyle(fontSize: 18, color: Colors.grey),
+            ),
+            SizedBox(height: 16),
+            Text(
+              'About Me',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              'I am a passionate Flutter developer with experience in building beautiful and functional mobile applications. I love to learn new technologies and improve my skills.',
+              style: TextStyle(fontSize: 16),
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/projects');
+              },
+              child: Text('My Projects'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/contact');
+              },
+              child: Text('Contact Me'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
