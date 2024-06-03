@@ -11,6 +11,8 @@ class ProjectDetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
+        backgroundColor: Colors.red,
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -19,12 +21,12 @@ class ProjectDetailPage extends StatelessWidget {
           children: [
             Text(
               title,
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Text(
               description,
-              style: TextStyle(fontSize: 16),
+              style: const TextStyle(fontSize: 16),
             ),
           ],
         ),

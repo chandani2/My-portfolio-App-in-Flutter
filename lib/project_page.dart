@@ -7,32 +7,64 @@ class ProjectsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Projects'),
+        title: const Text(
+          'Projects',
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.red,
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: ListView(
         padding: const EdgeInsets.all(16.0),
         children: [
           ListTile(
-            title: Text('Project 1'),
-            subtitle: Text('Description of Project 1'),
+            title: const Text('Dice Roll App'),
+            subtitle: const Text('I am created Dice Roll App.'),
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => ProjectDetailPage(
-                        'Project 1', 'Description of Project 1')),
+                    builder: (context) => ProjectDetailPage('Dice Roll App',
+                        'Dice Roll App is flutter application where yor through dice on press or button then they give random dice number.')),
               );
             },
           ),
           ListTile(
-            title: Text('Project 2'),
-            subtitle: Text('Description of Project 2'),
+            title: const Text('My Portfolio App'),
+            subtitle: const Text('In this app You can see my Portfolio.'),
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => ProjectDetailPage(
-                        'Project 2', 'Description of Project 2')),
+                    builder: (context) => ProjectDetailPage('My Portfolio App',
+                        'I have create Multiple Application in flutter. and also see my all details.')),
+              );
+            },
+          ),
+
+          ListTile(
+            title: const Text('WebView App'),
+            subtitle: const Text(
+                'In WebView App i am creating application for website.'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => ProjectDetailPage('WebView App',
+                        'We call website url in my app using webview.')),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('Quiz App'),
+            subtitle: const Text('I am created Quiz App for quiz.'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ProjectDetailPage(
+                      'Quiz App', 'Quiz questions is available.'),
+                ),
               );
             },
           ),
